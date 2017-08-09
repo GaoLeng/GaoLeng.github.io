@@ -84,6 +84,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="GaoLeng's Blog" type="application/atom+xml" />
+
 
 
 
@@ -101,7 +103,7 @@
 <meta property="og:site_name" content="GaoLeng&#39;s Blog">
 <meta property="og:description" content="1、单个TextView实现跑马灯效果在这里我们只需设置xml文件就能实现效果。 12345678910&amp;lt;club.zhanyan.yangjie.marqueetextviewdemo.MarqueeTextView       android:id=&quot;@+id/textViewId&quot;       android:layout_width=&quot;wrap_content&quot;       andr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T07:37:45.624Z">
+<meta property="og:updated_time" content="2017-08-09T08:24:04.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TextView实现跑马灯效果">
 <meta name="twitter:description" content="1、单个TextView实现跑马灯效果在这里我们只需设置xml文件就能实现效果。 12345678910&amp;lt;club.zhanyan.yangjie.marqueetextviewdemo.MarqueeTextView       android:id=&quot;@+id/textViewId&quot;       android:layout_width=&quot;wrap_content&quot;       andr">
@@ -381,6 +383,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/08/TextView实现跑马灯效果/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/08/TextView实现跑马灯效果/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -412,6 +425,7 @@
       
         <h3 id="1、单个TextView实现跑马灯效果"><a href="#1、单个TextView实现跑马灯效果" class="headerlink" title="1、单个TextView实现跑马灯效果"></a>1、单个TextView实现跑马灯效果</h3><p>在这里我们只需设置xml文件就能实现效果。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">club.zhanyan.yangjie.marqueetextviewdemo.MarqueeTextView</span></span></div><div class="line"><span class="tag">       <span class="attr">android:id</span>=<span class="string">"@+id/textViewId"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:ellipsize</span>=<span class="string">"marquee"</span>     //设置文字超过控件宽度时的显示方式</span></div><div class="line"><span class="tag">       <span class="attr">android:focusable</span>=<span class="string">"true"</span>     //设置是否获取焦点</span></div><div class="line"><span class="tag">       <span class="attr">android:focusableInTouchMode</span>=<span class="string">"true"</span>   //设置是否在触摸模式下获得焦点</span></div><div class="line"><span class="tag">       <span class="attr">android:marqueeRepeatLimit</span>=<span class="string">"marquee_forever"</span>//设置滚动次数，<span class="attr">marquee_forever</span>为无限次</span></div><div class="line"><span class="tag">       <span class="attr">android:singleLine</span>=<span class="string">"true"</span>     //设置文本单行显示</span></div><div class="line"><span class="tag">       <span class="attr">android:text</span>=<span class="string">"我是一个长的TextView，我是一个长的TextView，我是一个长的TextView。"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="2、多个TextView实现跑马灯效果"><a href="#2、多个TextView实现跑马灯效果" class="headerlink" title="2、多个TextView实现跑马灯效果"></a>2、多个TextView实现跑马灯效果</h3><p>如果设置多个TextView的跑马灯效果，就需要为多个TextView设置焦点。而默认情况下，是只能一个TextView获取焦点的。所以，在这里我们需要强制设置焦点。  </p>
 <p>我们以两个TextView为例： </p>
 <p>首先，我们创建一个类继承自TextView类，并且重写MarqueeTextView类所有的构造方法，并且重写isFocused()方法，返回值为true，并且将布局文件中的TextView控件改成我们自定义的类，就可以实现多个TextView的跑马灯效果了。</p>
@@ -508,7 +522,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="SOHUCS"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -578,6 +597,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -785,6 +811,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://gaoleng.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/08/08/TextView实现跑马灯效果/';
+          this.page.identifier = '2017/08/08/TextView实现跑马灯效果/';
+          this.page.title = 'TextView实现跑马灯效果';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://gaoleng.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -797,10 +843,6 @@
   
 
 
-
-
-
-  
 
 
 

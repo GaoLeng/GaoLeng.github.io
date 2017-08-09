@@ -84,6 +84,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="GaoLeng's Blog" type="application/atom+xml" />
+
 
 
 
@@ -384,6 +386,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/09/【笔记】关于Android-Studio混淆打包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/09/【笔记】关于Android-Studio混淆打包/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -409,10 +422,8 @@
 
       
         
-          
-          混淆首先修改app下的build.gradle文件
-123456789101112131415161718192021//执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。lintOptions &#123;    abortOnError false&#125; buil
-          ...
+          <h4 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h4><p>首先修改app下的build.gradle文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。</div><div class="line">lintOptions &#123;</div><div class="line">    abortOnError false</div><div class="line">&#125;</div><div class="line"> </div><div class="line">buildTypes &#123;</div><div class="line">     </div><div class="line">    release &#123;</div><div class="line">        // 不显示Log</div><div class="line">        buildConfigField &quot;boolean&quot;, &quot;LOG_DEBUG&quot;, &quot;false&quot;</div><div class="line">        //混淆</div><div class="line">        minifyEnabled true</div><div class="line">        //Zipalign优化</div><div class="line">        zipAlignEnabled true</div><div class="line">        // 移除无用的resource文件</div><div class="line">        shrinkResources true</div><div class="line">        //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件</div><div class="line">        proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/09/【笔记】关于Android-Studio混淆打包/#more" rel="contents">
@@ -533,6 +544,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/08/TextView实现跑马灯效果/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/08/TextView实现跑马灯效果/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -558,10 +580,8 @@
 
       
         
-          
-          1、单个TextView实现跑马灯效果在这里我们只需设置xml文件就能实现效果。
-12345678910&lt;club.zhanyan.yangjie.marqueetextviewdemo.MarqueeTextView       android:id="@+id/textViewId"   
-          ...
+          <h3 id="1、单个TextView实现跑马灯效果"><a href="#1、单个TextView实现跑马灯效果" class="headerlink" title="1、单个TextView实现跑马灯效果"></a>1、单个TextView实现跑马灯效果</h3><p>在这里我们只需设置xml文件就能实现效果。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">club.zhanyan.yangjie.marqueetextviewdemo.MarqueeTextView</span></span></div><div class="line"><span class="tag">       <span class="attr">android:id</span>=<span class="string">"@+id/textViewId"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></div><div class="line"><span class="tag">       <span class="attr">android:ellipsize</span>=<span class="string">"marquee"</span>     //设置文字超过控件宽度时的显示方式</span></div><div class="line"><span class="tag">       <span class="attr">android:focusable</span>=<span class="string">"true"</span>     //设置是否获取焦点</span></div><div class="line"><span class="tag">       <span class="attr">android:focusableInTouchMode</span>=<span class="string">"true"</span>   //设置是否在触摸模式下获得焦点</span></div><div class="line"><span class="tag">       <span class="attr">android:marqueeRepeatLimit</span>=<span class="string">"marquee_forever"</span>//设置滚动次数，<span class="attr">marquee_forever</span>为无限次</span></div><div class="line"><span class="tag">       <span class="attr">android:singleLine</span>=<span class="string">"true"</span>     //设置文本单行显示</span></div><div class="line"><span class="tag">       <span class="attr">android:text</span>=<span class="string">"我是一个长的TextView，我是一个长的TextView，我是一个长的TextView。"</span> /&gt;</span></div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/08/TextView实现跑马灯效果/#more" rel="contents">
@@ -669,6 +689,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -860,6 +887,14 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://gaoleng.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
 
 
 
@@ -872,10 +907,6 @@
   
 
 
-
-
-
-  
 
 
 
