@@ -1,2 +1,2 @@
-# [gaoleng.me](gaoleng.me)
+# [gaoleng.me](http://gaoleng.me)
 blog
